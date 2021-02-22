@@ -17,11 +17,8 @@ function App() {
 
     useEffect(() => {
         window.onscroll = () => {
-            {console.log(toggle)}
             if (window.pageYOffset>0){
-
                 setToggle(true)
-
             }else{
                 setToggle(false)
             }
@@ -30,7 +27,7 @@ function App() {
 
 
     return (
-    <div className="App overflow-hidden">
+    <div className="App">
 
 
         <MyNav toggle={toggle}/>

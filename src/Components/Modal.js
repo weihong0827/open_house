@@ -23,7 +23,7 @@ function MyModal({change}) {
     });
     return (
 
-        <div className={"fixed flex justify-center items-center w-full h-full bg-black top-0 left-0 bg-opacity-80"} >
+        <div className={"fixed flex justify-center items-center w-full h-full bg-black top-0 left-0 bg-opacity-80 z-20"} >
             <div className={"w-4/5 h-4/5 bg-white rounded-2xl flex flex-col max-w-screen-xl"} ref={ref}>
                 <div className={"flex justify-end"}>
                     <button type="button" className={"w-8 h-8 bg-blue-400 mr-5 mt-3 rounded-md "} onClick={()=>change(false)}>

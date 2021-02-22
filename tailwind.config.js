@@ -13,14 +13,20 @@ module.exports = {
       inner: 'inset 0 2px 4px 0 rgba(0, 0, 0, 0.06)',
       none: 'none',
     },
+
     extend:{
       height:{
         "screen-70":"70vh",
+        "nav":"8vh",
+        "logo":"6vh",
+        "side":"92vh",
         "300px":"300px",
       },
       width:{
+        "vh-1/2":"50vw",
         "300px":"300px",
-      }
+      },
+
     }
 
 
