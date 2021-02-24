@@ -2,13 +2,14 @@ import React, {useEffect, useRef} from 'react';
 import logo from '../Images/root.jpg';
 import profile from '../Images/Icons/64495.png'
 import mail_icon from '../Images/Icons/aiga_mail_bg-512.png'
-import fb from '../Images/Icons/fb.jpg'
-import ig from '../Images/Icons/ig.jpeg'
+import ig from "../Images/Icons/Instagram-Logo.wine-2.png";
+import fb from "../Images/Icons/fb.png";
 import telegram from '../Images/Icons/telegram-icon.png'
 
 
-function MyModal({change}) {
+function MyModal({change,detail}) {
     const ref = useRef(null);
+
     const handleClickOutside = (event) => {
         if (ref.current && !ref.current.contains(event.target)) {
             change(false);
@@ -20,10 +21,12 @@ function MyModal({change}) {
         return () => {
             document.removeEventListener('click', handleClickOutside, true);
         };
-    });
+    },[]);
+
+
     return (
 
-        <div className={"fixed flex justify-center items-center w-full h-full bg-black top-0 left-0 bg-opacity-80 z-20"} >
+        <div className={"fixed flex justify-center items-center w-screen h-screen bg-black top-0 left-0 bg-opacity-80 z-20"} >
             <div className={"w-4/5 h-4/5 bg-white rounded-2xl flex flex-col max-w-screen-xl"} ref={ref}>
                 <div className={"flex justify-end"}>
                     <button type="button" className={"w-8 h-8 bg-blue-400 mr-5 mt-3 rounded-md "} onClick={()=>change(false)}>
@@ -31,54 +34,49 @@ function MyModal({change}) {
                     </button>
                 </div>
                 <div className={"flex justify-center w-full h-1/3 mt-6"}>
-                    <div className={"w-4/5 h-full bg-black rounded-2xl bg-cover bg-center"} style={{backgroundImage:`url(${logo})`}}>
-
+                    <div className={"w-4/5 h-full bg-black rounded-2xl bg-cover bg-center"} style={{backgroundImage:detail['color']}}>
                     </div>
                 </div>
 
-                <div className={"flex h-1/4 justify-center mt-6"}>
+                <div className={"flex h-1/4 md:h-1/5 justify-center mt-6"}>
                     <div className={"w-4/5"}>
-                        <h2 className={"text-4x text-blue-400"}>Root</h2>
+                        <h2 className={"text-xl md:text-2xl text-blue-400"}>{detail.club_name}</h2>
                         <p className={"hide_scroll overscroll-contain overflow-y-auto h-4/5"}>
-                            Lorem ipsum dolor sit amet, consectetur adipiscing elit, sed do eiusmod tempor incididunt ut labore et dolore magna aliqua. Nisl rhoncus mattis rhoncus urna neque viverra justo nec. Aliquam vestibulum morbi blandit cursus risus. Diam sollicitudin tempor id eu nisl. Purus sit amet volutpat consequat mauris nunc congue. Posuere urna nec tincidunt praesent semper. Odio ut sem nulla pharetra diam sit amet nisl suscipit. Molestie nunc non blandit massa enim. Ut ornare lectus sit amet est placerat in egestas. Mauris pellentesque pulvinar pellentesque habitant morbi tristique.
+                            {detail['Club Description']}
                         </p>
                     </div>
 
                 </div>
-                <div className={"flex h-1/6 justify-center mt-6"}>
+                <div className={"flex h-1/6 justify-center mt-4 flex-wrap"}>
                     <div className={"w-4/5"}>
-                        <h2 className={"text-4x text-blue-400"}>POC</h2>
-                        <div>
-                            <img src={profile} className={"h-10 inline-block"}/>
-                            <p className={"ml-4 inline-block"}>some_one</p>
+                        <h2 className={"text-xl md:text-2xl text-blue-400"}>POC</h2>
+                        <div className={'w-full h-1/4 flex flex-warp'}>
+                            <img src={profile} className={"h-4 md:h-8 inline-block"}/>
+                            <p className={"ml-2 md:ml-4 inline-block"}>{detail["President's Name"]}</p>
                         </div>
-                        <div>
-                            <img src={mail_icon} className={"h-10 inline-block"}/>
-                            <p className={"ml-4 inline-block"}>some_one@mymail.sutd.edu.sg</p>
+                        <div className={'w-full h-1/3 flex flex-warp'}>
+                            <img src={mail_icon} className={"h-4 mt-1 md:h-8 inline-block"}/>
+                            <p className={"ml-2 md:ml-4 md:mt-2 inline-block overflow-x-scroll"}>{detail["email"]}</p>
                         </div>
                     </div>
 
                 </div>
 
-                <div className={"flex h-1/6 justify-center mt-6"}>
+                <div className={"flex h-1/6 justify-center items-center"}>
                     <div className={"w-4/5"}>
-                        <h2 className={"text-4x text-blue-400"}>Schedule</h2>
-                        <div className={"w-full "}>
+                        <h2 className={"text-xl md:text-2xl m-0 text-blue-400"}>Schedule</h2>
+                        <div className={"w-full"}>
+                            <p className={"w-2/3 h-full mt-2 inline-block leading-loose text-sm md:text-base"}>{detail['schedule']}</p>
+                            <div className={"w-1/3 pt-2 inline-block float-right"}>
+                                {detail.ig && <a href={detail["ig"]} className={"float-right"}>
+                                    <img src={ig} className={'h-5 w-5 inline-block md:h-8 md:w-8'}/>
+                                </a>}
 
-                            <p className={"w-2/3 h-full inline-block leading-loose "}>Every Tuesday and Thursday from 4-6PM</p>
-
-
-                            <div className={"w-1/3 inline-block float-right"}>
-                                <a href={'#'} className={"float-right"}>
-                                    <img src={ig} className={'h-6 w-6 inline-block md:h-8 md:w-8 lg:h-10 lg:w-10'}/>
-
-                                </a>
-
-                                <a href={'#'} className={"mr-4 float-right"}>
-                                    <img src={fb} className={'h-6 w-6 inline-block md:h-8 md:w-8 lg:h-10 lg:w-10'}/>
-                                </a>
-                                <a href={'#'} className={"mr-4 float-right"}>
-                                    <img src={telegram} className={'h-6 w-6 inline-block md:h-8 md:w-8 lg:h-10 lg:w-10'}/>
+                                {detail.facebook && <a href={detail.facebook} className={"mr-2 md:mr-4 float-right"}>
+                                    <img src={fb} className={'h-5 w-5 inline-block md:h-8 md:w-8'}/>
+                                </a>}
+                                <a href={detail['President\'s Telegram Handle']} className={"mr-2 md:mr-4 float-right"}>
+                                    <img src={telegram} className={'h-5 w-5 inline-block md:h-8 md:w-8'}/>
                                 </a>
                             </div>
                         </div>

@@ -1,6 +1,6 @@
 import React from 'react';
-import ig from "../Images/Icons/ig.jpeg";
-import fb from "../Images/Icons/fb.jpg";
+import ig from "../Images/Icons/Instagram-Logo.wine-2.png";
+import fb from "../Images/Icons/fb.png";
 import telegram from "../Images/Icons/telegram-icon.png";
 
 function Footer(props) {
@@ -27,6 +27,7 @@ function Footer(props) {
                         <img src={fb} className={'h-6 w-6 inline-block md:h-8 md:w-8 lg:h-10 lg:w-10'}/>
                     </a>
                     <a href={'#'} >
+
                         <img src={ig} className={'h-6 w-6 inline-block md:h-8 md:w-8 lg:h-10 lg:w-10'}/>
                     </a>
                 </div>
