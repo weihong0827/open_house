@@ -68,14 +68,14 @@ function MyModal({change,detail}) {
                         <div className={"w-full"}>
                             <p className={"w-2/3 h-full mt-2 inline-block leading-loose text-sm md:text-base"}>{detail['schedule']}</p>
                             <div className={"w-1/3 pt-2 inline-block float-right"}>
-                                {detail.ig && <a href={detail["ig"]} className={"float-right"}>
+                                {detail.ig && <a href={detail["ig"]} target={'_blank'} className={"float-right"}>
                                     <img src={ig} className={'h-5 w-5 inline-block md:h-8 md:w-8'}/>
                                 </a>}
 
-                                {detail.facebook && <a href={detail.facebook} className={"mr-2 md:mr-4 float-right"}>
+                                {detail.facebook && <a href={detail.facebook} target={'_blank'} className={"mr-2 md:mr-4 float-right"}>
                                     <img src={fb} className={'h-5 w-5 inline-block md:h-8 md:w-8'}/>
                                 </a>}
-                                <a href={detail['President\'s Telegram Handle']} className={"mr-2 md:mr-4 float-right"}>
+                                <a href={detail['President\'s Telegram Handle']} target={'_blank'} className={"mr-2 md:mr-4 float-right"}>
                                     <img src={telegram} className={'h-5 w-5 inline-block md:h-8 md:w-8'}/>
                                 </a>
                             </div>
