@@ -48,7 +48,6 @@ function App() {
         }
     }
 
-
     return (
     <div className={'App overflow-x-hidden'} >
         <MyNav/>

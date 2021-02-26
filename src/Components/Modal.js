@@ -41,10 +41,10 @@ function MyModal({change,detail}) {
                     </iframe>
                 </div>
 
-                <div className={"flex h-auto m-h-1/4 justify-center mt-6"}>
+                <div className={"flex h-auto max-h-1/4 justify-center mt-6"}>
                     <div className={"w-4/5"}>
                         <h2 className={"text-xl md:text-2xl text-blue-400"}>{detail.club_name}</h2>
-                        <p className={"hide_scroll overscroll-contain overflow-y-auto h-4/5"}>
+                        <p className={"hide_scroll overscroll-contain overflow-y-scroll h-4/5"}>
                             {detail['Club Description']}
                         </p>
                     </div>
