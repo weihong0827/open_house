@@ -21,7 +21,8 @@ module.exports = {
         "logo":"6vh",
         "side":"92vh",
         "300px":"300px",
-        'video':'50vh'
+        'video':'50vh',
+        '9/10':'90%'
       },
       maxHeight:{
         '1/4':'25%',

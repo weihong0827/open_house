@@ -34,11 +34,12 @@ function MyModal({change,detail}) {
                     </button>
                 </div>
                 <div className={"flex justify-center w-full h-1/3 mt-6"}>
-                    {/*<div className={"w-4/5 h-full bg-black rounded-2xl bg-cover bg-center"} style={{backgroundImage:detail['color']}}>*/}
-                    {/*</div>*/}
-                    <iframe className={"w-4/5 h-full bg-black rounded-2xl bg-cover bg-center"} style={{backgroundImage:detail['color']}} src={'https://www.youtube.com/embed/aatr_2MstrI?autoplay=1'} allowFullScreen>
+                    <div className={"w-4/5 h-full bg-black rounded-2xl bg-cover bg-center flex justify-center items-center"} style={{backgroundImage:detail['color']}}>
+                        <iframe className={'w-full lg:w-2/3 h-9/10 rounded-2xl ring ring-blue-400 ring-offset-8 ring-offset-blue-100'} src={'https://www.youtube.com/embed/aatr_2MstrI?autoplay=1'} allowFullScreen={true} ></iframe>
+                    </div>
+                    {/*<iframe className={"w-4/5 h-full bg-black rounded-2xl bg-cover bg-center"} style={{backgroundImage:detail['color']}} src={'https://www.youtube.com/embed/aatr_2MstrI?autoplay=1'} allowFullScreen>*/}
 
-                    </iframe>
+                    {/*</iframe>*/}
                 </div>
 
                 <div className={"flex h-auto max-h-1/4 justify-center mt-6"}>
