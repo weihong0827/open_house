@@ -21,11 +21,22 @@ module.exports = {
         "logo":"6vh",
         "side":"92vh",
         "300px":"300px",
+        'video':'50vh'
+      },
+      maxHeight:{
+        '1/4':'25%',
       },
       width:{
         "vh-1/2":"50vw",
         "300px":"300px",
       },
+      top:{
+        'background':'8vh',
+      },
+      outline:{
+        'none':'none',
+
+      }
 
     }
 
@@ -34,6 +45,7 @@ module.exports = {
   },
   variants: {
     extend: {
+
       visibility:['hover, group-hover'],
       display:['hover','group-hover'],
       translate: ['group-hover'],

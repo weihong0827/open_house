@@ -12,6 +12,7 @@ import Categories from "./Components/Categories";
 import Description from "./Components/Description";
 import MyModal from "./Components/Modal";
 import Footer from "./Components/Footer";
+import Video from "./Components/Video";
 import arts from "./details/art.json";
 import sports from "./details/sports.json";
 import specialists from "./details/specialist.json";
@@ -49,7 +50,7 @@ function App() {
 
 
     return (
-    <div className="App" >
+    <div className={'App overflow-x-hidden'} >
         <MyNav/>
         <Background/>
         <div className={"relative flex text-xl w-full mt-8 justify-center md:text-4xl font-sans font-light"}>
@@ -63,8 +64,8 @@ function App() {
 
         </div>
 
-        <Description/>
-
+        {/*<Description/>*/}
+        <Video/>
         <Card_collection cat={render}/>
 
         <Footer/>

@@ -34,11 +34,14 @@ function MyModal({change,detail}) {
                     </button>
                 </div>
                 <div className={"flex justify-center w-full h-1/3 mt-6"}>
-                    <div className={"w-4/5 h-full bg-black rounded-2xl bg-cover bg-center"} style={{backgroundImage:detail['color']}}>
-                    </div>
+                    {/*<div className={"w-4/5 h-full bg-black rounded-2xl bg-cover bg-center"} style={{backgroundImage:detail['color']}}>*/}
+                    {/*</div>*/}
+                    <iframe className={"w-4/5 h-full bg-black rounded-2xl bg-cover bg-center"} style={{backgroundImage:detail['color']}} src={'https://www.youtube.com/embed/aatr_2MstrI?autoplay=1'} allowFullScreen>
+
+                    </iframe>
                 </div>
 
-                <div className={"flex h-1/4 md:h-1/5 justify-center mt-6"}>
+                <div className={"flex h-auto m-h-1/4 justify-center mt-6"}>
                     <div className={"w-4/5"}>
                         <h2 className={"text-xl md:text-2xl text-blue-400"}>{detail.club_name}</h2>
                         <p className={"hide_scroll overscroll-contain overflow-y-auto h-4/5"}>
