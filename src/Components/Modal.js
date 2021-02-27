@@ -27,7 +27,7 @@ function MyModal({change,detail}) {
     return (
 
         <div className={"fixed flex justify-center items-center w-screen h-screen bg-black top-0 left-0 bg-opacity-80 z-20"} >
-            <div className={"w-4/5 h-4/5 bg-white rounded-2xl flex flex-col max-w-screen-xl"} ref={ref}>
+            <div className={`w-4/5 ${detail['Club Description'].length >500 ? 'h-7/10' :'h-2/3'} bg-white rounded-2xl flex flex-col max-w-screen-xl`} ref={ref}>
                 <div className={"flex justify-end"}>
                     <button type="button" className={"w-6 h-6 md:w-8 md:h-8 bg-blue-400 mr-5 mt-3 rounded-md "} onClick={()=>change(false)}>
                         <span aria-hidden="true" className={"text-lg md:text-2xl text-white"}>X</span>
@@ -66,11 +66,11 @@ function MyModal({change,detail}) {
 
                 </div>
 
-                <div className={"flex h-1/6 justify-center"}>
+                <div className={"flex h-1/6 justify-center mt-2 md:mt-4"}>
                     <div className={"w-4/5 lg:w-9/10"}>
                         <h2 className={"text-xl md:text-2xl m-0 text-blue-400"}>Schedule</h2>
                         <div className={"w-full"}>
-                            <p className={"w-2/3 h-1/2 mt-0 md:mt-2 inline-block text-sm md:text-base overflow-y-scroll"}>{detail['schedule']}</p>
+                            <p className={"w-2/3 h-10 mt-0 md:mt-2 inline-block text-sm md:text-base overflow-scroll"}>{detail['schedule']}</p>
                             <div className={"w-1/3 pt-2 inline-block float-right"}>
                                 {detail.ig && <a href={detail["ig"]} target={'_blank'} className={"float-right"}>
                                     <img src={ig} className={'h-5 w-5 inline-block md:h-8 md:w-8'}/>

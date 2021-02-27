@@ -45,7 +45,7 @@ function MyNav() {
                 </div>
 
                 <div className={`transition-transform duration-500 ease-in-out ${hide?"transform translate-x-0":"transform  translate-x-full"} absolute top-0 bg-blue-600 w-vw-1/2 h-screen flex flex-col items-center`} ref={ref}>
-                    <div className={'h-1/2 w-full flex flex-col items-center justify-around'}>
+                    <div className={'h-1/3 w-full flex flex-col items-center justify-between mt-6'}>
                         <div className={`top-4 h-6 w-6 flex flex-col justify-around cursor-pointer transition-transform delay-300 duration-100 ease-in-out ${hide?"transform translate-x-0":"transform  translate-x-full"}`} onClick={()=>{setHide(!hide)}}>
                             <div className={"h-1 w-full bg-white"}></div>
                             <div className={"h-1 w-full bg-white"}></div>
